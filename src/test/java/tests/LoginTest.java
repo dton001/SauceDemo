@@ -14,7 +14,7 @@ public class LoginTest extends BaseTest{
     }
 
     @Test
-    public void login(){
+    public void login() {
         loginPage.login();
     }
 }

@@ -18,7 +18,7 @@ public class LoginPage extends Base{
     By usernameInput = By.xpath("//*[@id='user-name']");
     By passwordInput = By.xpath("//*[@id='password']");
     By loginButton = By.xpath("//*[@id='login-button']");
-
+    
     public String encryptPassword(){
         Base64.Encoder encoder = Base64.getMimeEncoder();
         return new String(encoder.encodeToString(properties.getProperty("password").getBytes()));

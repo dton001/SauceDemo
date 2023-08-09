@@ -14,7 +14,7 @@ public class Base {
     protected Properties properties;
 	
 	public Base(WebDriver driver){
-        this.driver = driver;
+        this.driver = driver; 
         readProperty();
 	}
 
