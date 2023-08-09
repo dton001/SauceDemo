@@ -15,10 +15,10 @@ public class LoginPage extends Base{
         super(driver);
     }
     
-    By usernameInput = By.xpath("//*[@id='user-name']");
-    By passwordInput = By.xpath("//*[@id='password']");
-    By loginButton = By.xpath("//*[@id='login-button']");
-    
+    private By usernameInput = By.xpath("//*[@id='user-name']");
+    private By passwordInput = By.xpath("//*[@id='password']");
+    private By loginButton = By.xpath("//*[@id='login-button']");
+
     public String encryptPassword(){
         Base64.Encoder encoder = Base64.getMimeEncoder();
         return new String(encoder.encodeToString(properties.getProperty("password").getBytes()));
@@ -29,7 +29,6 @@ public class LoginPage extends Base{
     }
 
     public void login(){
-        System.out.println(encryptPassword());
     	sendText(usernameInput, properties.getProperty("username"));
     	sendText(passwordInput, decryptPassword());
         click(loginButton);
